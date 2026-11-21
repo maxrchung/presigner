@@ -15,7 +15,7 @@ Bun.serve({
     } catch {}
 
     const presignedUrl = s3.presign(key, {
-      virtualHostedStyle: true,
+      virtualHostedStyle: false,
       // Minimum time to guarantee cache window
       expiresIn: CACHE_MAX_AGE * 2,
     });
