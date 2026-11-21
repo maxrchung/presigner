@@ -12,7 +12,7 @@ Bun.serve({
     // https://github.com/timomeh/s3-public-presigner/pull/1
     try {
       key = decodeURIComponent(key);
-    } catch { }
+    } catch {}
 
     const presignedUrl = s3.presign(key, {
       virtualHostedStyle: true,
