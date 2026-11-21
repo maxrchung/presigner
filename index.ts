@@ -21,7 +21,7 @@ Bun.serve({
     });
 
     // Non-empty body so CDNs (like Railway's) don't skip caching Content-Length: 0 redirects.
-    return new Response("Redirecting", {
+    return new Response("Found", {
       status: 302,
       headers: {
         Location: presignedUrl,

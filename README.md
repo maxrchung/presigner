@@ -16,7 +16,7 @@ Configure your S3-compatible bucket credentials (see `.env.example`):
 
 ## Caching Behavior
 
-Redirects respond with `302`, a small non-empty body (`Redirecting`) so CDNs do
+Redirects respond with `302`, a small non-empty body (`Found`) so CDNs do
 not skip caching `Content-Length: 0` redirects, and `Cache-Control:
 max-age=3600` (1 hour edge/browser cache). Presigned URLs are signed with
 `expiresIn: 7200` (2 hours) so a redirect served just before the 1-hour cache
