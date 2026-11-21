@@ -25,7 +25,7 @@ Bun.serve({
       status: 302,
       headers: {
         Location: presignedUrl,
-        "Cache-Control": `public, max-age=${CACHE_MAX_AGE}`,
+        "Cache-Control": `max-age=${CACHE_MAX_AGE}`,
       },
     });
   },
